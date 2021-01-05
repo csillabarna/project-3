@@ -67,9 +67,7 @@ const City = (props) => {
   }
 
   return <main className="singleCityMain">
-    <header>
       <Navbar />
-    </header>
 
     <section className="cityInfo">
       <img src={city.image} alt={city.name} />
@@ -90,7 +88,7 @@ const City = (props) => {
       </Link>}
       {token && <Link to={`/cities/${city.name}/users`}>
         <button className="darkButton">
-          See Users in {city.name}
+          Users in {city.name}
         </button>
       </Link>}
 
@@ -98,7 +96,7 @@ const City = (props) => {
 
       {/* {token && <a rel="noreferrer" target='_blank' href={process.env.CHAT_URL}> */}
         <button className="darkButton">
-          Join Chat Room
+          Join Chat
         </button>
       </a>}
     </section>
@@ -120,12 +118,12 @@ const City = (props) => {
               {isCreator(comment.user._id) &&
                 <Link to={`/cities/${cityName}/comments/${comment._id}`}>
                   <button>
-                    Edit 🖋
+                    Edit
                   </button>
                 </Link>}
               {isCreator(comment.user._id) && <div>
                 <button onClick={() => handleDeleteComment(comment._id)}>
-                  Delete ❌
+                  Delete
                 </button>
               </div>}
             </div>

@@ -36,9 +36,7 @@ const AddCity = (props) => {
   }
 
   return <main className="addCityMain">
-    <header>
       <Navbar />
-    </header>
     <h1>Add Your City</h1>
     <form onSubmit={handleSubmit}>
       <label>Name

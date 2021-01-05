@@ -23,9 +23,7 @@ const UserListByCity = (props) => {
   }
 
   return <main className="userListMain">
-    <header>
-      <Navbar />
-    </header>
+      <Navbar/>
     <section className="cardSection">
       {filteredUsers().map((user, index) => {
         return <div key={index}>

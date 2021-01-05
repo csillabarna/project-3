@@ -26,11 +26,8 @@ const CityList = () => {
   }
 
   return <main className="citiesMain">
-    <header>
-      <Navbar />
-    </header>
+      <Navbar/>
     <section className="searchSection">
-      <label>Search</label>
       <input
         className="searchbar"
         placeholder="find your city"

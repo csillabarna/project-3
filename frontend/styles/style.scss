@@ -37,6 +37,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 30px 0 30px 0;
+  text-align: center;
   
   small {
     color: var(--dark);
@@ -52,14 +54,20 @@ footer {
 
 // NAVBAR
 
-nav {
-  max-width: 100%;
+header {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.desktopNav {
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  
+
   button {
     height: 45px;
     width: 150px;
@@ -69,24 +77,39 @@ nav {
     border-radius: 4px;
     border: none;
   }
-
+  
   .darkButton {
     background: var(--dark);
     color: var(--grey);
   }
-
+  
   .navLogo {
     width: 180px;
   }
-
+}
+  
   .mobileNav {
     display: none;
+
+    button {
+      height: 40px;
+      width: 70px;
+      margin: 5px;
+      font-family: var(--font);
+      font-size: 12px;
+      border-radius: 4px;
+      border: none;
+    }
+    
+    .darkButton {
+      background: var(--dark);
+      color: var(--grey);
+    }
 
     .mobileLogo {
       display: none;
     }
   }
-}
 
 // HOMEPAGE
 
@@ -100,15 +123,19 @@ nav {
 
   img {
     margin: 30px;
-    width: 300px;
+    width: 280px;
   }
 
   form {
-    width: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     input {
-      width: 300px;
-      height: 45px;
+      width: 100%;
+      height: 40px;
       margin: 10px;
       font-family: var(--font);
       font-size: 20px;
@@ -120,7 +147,7 @@ nav {
 
   button {
     width: 300px;
-    height: 45px;
+    height: 40px;
     margin: 15px;
     border: solid 2px var(--extraLight);
     font-weight: 400;
@@ -157,7 +184,7 @@ nav {
   }
 
   .cardOuter {
-    width: 300px;
+    width: 250px;
     height: 300px;
     margin: 10px;
     box-shadow: 0 0 8px var(--extraLight);
@@ -237,7 +264,7 @@ nav {
   }
 
   .buttonSection {
-    width: 80%;
+    width: 100%;
     min-height: 100px;
     display: flex;
     flex-direction: row;
@@ -346,12 +373,12 @@ nav {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 25px;
     color: var(--dark);
   }
 
   form {
-    width: 350px;
+    width: 300px;
 
     label {
       width: 100%;
@@ -390,12 +417,12 @@ nav {
     }
 
     button {
-      height: 45px;
+      height: 40px;
       width: 100%;
       font-family: var(--font);
       font-size: 16px;
       border-radius: 4px;
-      border: none;
+      border: solid 2px var(--extraLight);
       margin: 20px 0 20px 0;
     }
   }
@@ -428,7 +455,7 @@ nav {
   }
 
   form {
-    width: 350px;
+    width: 280px;
 
     label {
       width: 100%;
@@ -473,7 +500,7 @@ nav {
       font-size: 16px;
       border-radius: 4px;
       border: none;
-      margin: 20px 0 20px 0;
+      margin: 10px 0 10px 0;
     }
   }
 }
@@ -493,7 +520,7 @@ nav {
   }
   
   .cityImage {
-    width: 600px;
+    width: 60%;
     margin: 10px;
   
     img {
@@ -502,7 +529,7 @@ nav {
   }
   
   form {
-    width: 500px;
+    width: 280px;
   
     label {
       width: 100%;
@@ -521,7 +548,7 @@ nav {
     }
 
     textarea {
-      min-height: 200px;
+      min-height: 150px;
       width: 100%;
       font-size: 16px;
       background: none;
@@ -567,7 +594,7 @@ nav {
     }
   
     form {
-      width: 350px;
+      width: 280px;
   
       label {
         width: 100%;
@@ -586,7 +613,7 @@ nav {
       }
 
       textarea {
-        min-height: 200px;
+        min-height: 150px;
         width: 100%;
         font-size: 16px;
         background: none;
@@ -621,11 +648,11 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 
     .cardOuter {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 230px;
       margin: 10px;
       box-shadow: 0 0 8px var(--extraLight);
       background: var(--background);
@@ -635,8 +662,8 @@ nav {
       justify-content: center;
   
       .imageContainer {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 100%;
         overflow: hidden;
   
@@ -726,9 +753,10 @@ nav {
 
   .languagesSection {
     width: 800px;
-    height: 130px;
+    min-height: 130px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background: var(--grey);
@@ -789,7 +817,7 @@ nav {
 
 @media only screen and (max-width: 850px) {
 
-  nav {  
+  .desktopNav {  
     button {
       width: 100px;
     }
@@ -800,9 +828,63 @@ nav {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .userProfileMain {
+    .languagesSection {
+      width: 90%;
+    }
+
+    .bioSection {
+      width: 90%;
+    }
+
+    .interestsSection {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+// SINGLE CITY PAGE
+
+  .singleCityMain {
+    .commentsSection {
+  
+      h3 {
+        font-size: 16px;
+      }
+        
+      .commentOuter {
+        .commentBody {
+          width: 60%;
+          padding: 5px;
+          margin: 5px;
+        }
+    
+        .commentButtons {
+          width: 30%;
+
+          button {
+              font-size: 14px;
+              height: 30px;
+          }  
+        }
+  
+        .userImage {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
 
-  nav {  
+//NAVBAR
+
+  .desktopNav {  
     height: 80px;
 
     button {
@@ -815,17 +897,60 @@ nav {
       width: 100px;
     }
   }
-  
-  .searchbar {
-    width: 70%;
-  }
 }
 
 @media only screen and (max-width: 500px) {
 
+// SINGLE CITY PAGE
+
+  .singleCityMain {
+    .buttonSection {
+      width: 100%;
+  
+      button {
+        padding: 5px;
+        height: 20px;
+        width: 80px;
+        font-size: 12px;
+        margin: 5px;
+      }
+    }
+
+    .cityInfo {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+// EDIT CITY PAGE 
+
+.editCityMain {
+  h1 {
+    font-size: 20px;
+  }
+
+  .cityImage {
+    width: 80%;
+  }
+}
+
+// NAVBAR 
+
   .mobileNav {
-    display: inline-block;
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
     width: 100%;
+
+    .mobileLogo {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
     
     img {
       display: inline;
@@ -833,13 +958,20 @@ nav {
     }
   }
 
-  .navLogo {  
+  .desktopNav {
     display: none !important;
   }
 
+// CITIES PAGE
+
   .citiesMain {
-    input {
-      width: 70%;
+
+    .searchSection {
+      
+      .searchbar {
+        width: 80%;
+        height: 30px;
+      }
     }
   }
 }

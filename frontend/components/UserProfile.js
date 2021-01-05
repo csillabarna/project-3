@@ -24,9 +24,7 @@ const UserProfile = (props) => {
   }
 
   return <main className="userProfileMain">
-    <header>
-      <Navbar />
-    </header>
+      <Navbar/>
 
     <section className="userData">
       <h1>{user.username}</h1>

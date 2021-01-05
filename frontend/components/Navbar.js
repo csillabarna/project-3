@@ -10,8 +10,9 @@ const Navbar = (props) => {
     props.history.push('/')
   }
 
-  return <nav>
-    <Link to="/cities">
+  return <header>
+    <nav className="desktopNav">
+      <Link to="/cities">
       <button className="darkButton">Home</button>
     </Link>
 
@@ -20,11 +21,7 @@ const Navbar = (props) => {
         <button className="darkButton">Add City</button>
       </Link>}
 
-    <img className="navLogo" src={Logo} alt="Logo"/>
-
-    <div className="mobileNav">
-      <img className="mobileLogo" src={Logo} alt="Logo"/>
-    </div>
+    <img className="navLogo" src={Logo} alt="Logo" />
 
     {localStorage.getItem('token')
       && <Link to={`/user/${userId}/update`}>
@@ -34,6 +31,32 @@ const Navbar = (props) => {
     {localStorage.getItem('token')
       && <button onClick={handleLogout}>Logout</button>}
   </nav>
+
+  <nav className="mobileNav">
+<div className="mobileLogo">
+  <img src={Logo} alt="Logo" />
+</div>
+<div className="mobileButtons">
+  <Link to="/cities">
+    <button className="darkButton">Home</button>
+  </Link>
+
+  {localStorage.getItem('token')
+    && <Link to="/cities/add-city">
+      <button className="darkButton">Add City</button>
+    </Link>}
+
+  {localStorage.getItem('token')
+    && <Link to={`/user/${userId}/update`}>
+      <button>Edit Profile</button>
+    </Link>}
+
+  {localStorage.getItem('token')
+    && <button onClick={handleLogout}>Logout</button>}
+</div>
+</nav>
+  </header>
+  
 }
 
 export default withRouter(Navbar)

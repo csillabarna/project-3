@@ -72,6 +72,22 @@ const Signup = (props) => {
     updateSignupFormData(data)
   }
 
+  function handleSpecialisms(event) {
+    const data = {
+      ...signupFormData,
+      specialisms: `${event.target.value}`
+    }
+    updateSignupFormData(data)
+  }
+
+  function handleLanguages(event) {
+    const data = {
+      ...signupFormData,
+      languages: `${event.target.value}`
+    }
+    updateSignupFormData(data)
+  }
+
   function handleSubmit(event) {
     event.preventDefault()
     axios.post('/api/signup', signupFormData)
@@ -179,24 +195,34 @@ const Signup = (props) => {
           name="availableFor"
         />
       </label>
-      <label>specialisms
-        <input
-          type="text"
-          onChange={handleChange}
-          value={signupFormData.specialisms}
-          name="specialisms"
-        />
+
+      <label>specialism
+        <select name="specialisms" onChange={handleSpecialisms}>
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>Full Stack</option>
+        </select>
       </label>
 
-      <label>languages
-        <input
-          type="text"
-          onChange={handleChange}
-          value={signupFormData.languages}
-          name="languages"
-        />
+      <label>primary language
+        <select name="languages" onChange={handleLanguages}>
+          <option>Java</option>
+          <option>JavaScript</option>
+          <option>React.js</option>
+          <option>Python</option>
+          <option>Ruby</option>
+          <option>C</option>
+          <option>C#</option>
+          <option>C++</option>
+          <option>Go</option>
+          <option>R</option>
+          <option>Swift</option>
+          <option>PHP</option>
+          <option>Kotlin</option>
+          <option>Perl</option>
+          <option>Rust</option>
+        </select>
       </label>
-
 
       <label>image
         <input

@@ -43,9 +43,7 @@ const EditCity = (props) => {
   console.log(formData)
 
   return <main className="editCityMain">
-    <header>
-      <Navbar />
-    </header>
+      <Navbar/>
     <h1>Edit Details about <strong>{cityName}</strong></h1>
     <div className="cityImage">
       <img src={formData.image} />
@@ -53,7 +51,10 @@ const EditCity = (props) => {
     <form onSubmit={handleSubmit}>
 
       <label>Bio
-        <textarea onChange={handleChange} value={formData.bio} name="bio">
+        <textarea 
+        onChange={handleChange} 
+        value={formData.bio} 
+        name="bio">
         </textarea>
       </label>
       <label>Image

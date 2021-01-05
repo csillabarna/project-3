@@ -82,9 +82,7 @@ const UpdateUserProfile = (props) => {
   }
 
   return <main className="updateUserMain">
-    <header>
-      <Navbar />
-    </header>
+      <Navbar/>
     <h1>Hi <strong>{formData.username}</strong></h1>
     <h2>Update your Profile</h2>
     <div className="userImage">
@@ -172,11 +170,10 @@ const UpdateUserProfile = (props) => {
       </label>
 
       <button>Update</button>
-
-    </form>
-    <button onClick={handleDelete}>
+      <button onClick={handleDelete}>
       Delete Profile
     </button>
+    </form>
     <Footer/>
   </main>
 }
