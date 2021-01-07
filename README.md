@@ -117,7 +117,7 @@ I decided to get all capital cities of the world so that rate-limit was a real p
 ```
 
  I exported the data, cleaned it, converted it to the right format.
- I removed the function above and pasted my new list into the seeding file. **This process saved our team a huge amount of time since the original seeding process would have lasted for 6 hours.**
+ I removed the function above and pasted my new list into the seeding file. **This process saved our team a huge amount of time since the original seeding  would have lasted for 6 hours.**
 
 
 ## Challenges
