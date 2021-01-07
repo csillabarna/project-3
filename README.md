@@ -130,7 +130,7 @@ The "chat users in the city" button takes the user to another separate chat app,
 Given more time, we would have also liked to provide more information about the cities, and visualize coffee shops and nice meeting spots on a map.
  
 
-# Lessons learned
+## Lessons learned
 As mentioned above, working with a remote team on this app provided an opportunity for me to get more familiar with `Git`, `GitHub` and with the other collaborative tools we used. This included everything from discussing features, working through merge conflicts to organizing our tasks and timelines. 
 
 # Summary
