@@ -123,17 +123,17 @@ I decided to get all capital cities of the world so that rate-limit was a real p
 ## Challenges
 Since this project was the first we worked on together via GitHub it was challenging sometimes to sync our work and merge the files. By the end of the week we improved a lot and got comfortable working remotely and using Git.
  
-## Future enhancements.
+## Future enhancements
 
 The "chat users in the city" button takes the user to another separate chat app, that initially we wanted to include in the project. Unfortunately we couldn't manage to merge it on time, so we connected it via a link not to lose this functionality. 
 
 Given more time, we would have also liked to provide more information about the cities, and visualize coffee shops and nice meeting spots on a map.
  
- 
-# Summary
- 
+
+# Lessons learned
 As mentioned above, working with a remote team on this app provided an opportunity for me to get more familiar with `Git`, `GitHub` and with the other collaborative tools we used. This included everything from discussing features, working through merge conflicts to organizing our tasks and timelines. 
 
+# Summary
 Overall, it was exciting to see how quickly the app took shape.
 As the first full stack project I have worked on to completion, it was a very enlightening experience to see how different technologies in the `MERN` stack relate to form a complete whole.
  
