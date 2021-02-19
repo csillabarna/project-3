@@ -19,7 +19,7 @@ Quick peek of the working app ⬇️
 
 
 ## Overview
-We worked as a team of three - I have contributed with Laura C Harvey and Sherryll Elliott - on this project. Each day we had a team stand-up to discuss our next steps. We were working on features individually but also collaborated throughout the day to solve problems or debug each others' code.
+We worked as a team of three on this project. Each day we had a team stand-up to discuss our next steps. We were working on features individually but also collaborated throughout the day to solve problems or debug each others' code.
  
 We built a `MongoDB` database of cities, and served this data using `Express`. Used `JWT Authentication` to create accounts, login and update profiles. The front end is built with React where users can search for cities and connect with other users in the chosen city. They can delete, update, create comments on the city page and also add a new city to the database.
  
